@@ -1,0 +1,274 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>GlowRide RGB Ambient Light Kit | Upgrade Your Car Interior</title>
+  <meta name="description" content="Universal RGB ambient interior light kit for cars. Transform your cabin with app-controlled mood lighting. Order via WhatsApp." />
+  <meta property="og:title" content="GlowRide RGB Ambient Light Kit" />
+  <meta property="og:description" content="Turn a boring car interior into a premium night cabin in minutes." />
+  <meta property="og:image" content="assets/hero.png" />
+  <meta name="theme-color" content="#06070A" />
+  <style>
+    :root{
+      --bg:#06070A;
+      --panel:#0E1118;
+      --panel2:#151A24;
+      --text:#F8FAFC;
+      --muted:#A7B0BE;
+      --line:rgba(255,255,255,.12);
+      --accent:#8B5CF6;
+      --accent2:#22D3EE;
+      --hot:#F43F5E;
+      --good:#34D399;
+      --max:1120px;
+    }
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{
+      margin:0;
+      font-family:Inter,Arial,Helvetica,sans-serif;
+      color:var(--text);
+      background:
+        radial-gradient(circle at top left, rgba(139,92,246,.22), transparent 34rem),
+        radial-gradient(circle at 85% 15%, rgba(34,211,238,.16), transparent 28rem),
+        linear-gradient(180deg,#06070A 0%,#080A10 50%,#050608 100%);
+      line-height:1.5;
+    }
+    a{color:inherit;text-decoration:none}
+    .wrap{max-width:var(--max);margin:0 auto;padding:0 20px}
+    header{
+      position:sticky;top:0;z-index:10;
+      backdrop-filter:blur(18px);
+      background:rgba(6,7,10,.72);
+      border-bottom:1px solid var(--line);
+    }
+    .nav{height:72px;display:flex;align-items:center;justify-content:space-between;gap:20px}
+    .brand{display:flex;align-items:center;gap:12px;font-weight:900;letter-spacing:.08em;text-transform:uppercase}
+    .mark{width:34px;height:34px;border:1px solid var(--line);display:grid;place-items:center;background:linear-gradient(135deg,var(--accent),var(--accent2));box-shadow:0 0 32px rgba(139,92,246,.45)}
+    .navlinks{display:flex;gap:22px;color:var(--muted);font-size:14px}
+    .navlinks a:hover{color:var(--text)}
+    .navcta{border:1px solid rgba(52,211,153,.55);padding:10px 14px;background:rgba(52,211,153,.12);font-weight:800;color:#EFFFF7}
+
+    .hero{padding:72px 0 46px}
+    .hero-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:42px;align-items:center}
+    .eyebrow{display:inline-flex;gap:10px;align-items:center;border:1px solid var(--line);background:rgba(255,255,255,.04);padding:8px 12px;color:var(--muted);font-size:13px;text-transform:uppercase;letter-spacing:.12em}
+    .pulse{width:8px;height:8px;border-radius:50%;background:var(--good);box-shadow:0 0 20px var(--good)}
+    h1{font-size:clamp(42px,6vw,74px);line-height:.92;margin:22px 0 18px;letter-spacing:-.07em}
+    .sub{font-size:clamp(18px,2.2vw,23px);color:#D8DEE9;max-width:620px;margin:0 0 28px}
+    .hero-actions{display:flex;flex-wrap:wrap;gap:12px;margin:30px 0 22px}
+    .btn{display:inline-flex;align-items:center;justify-content:center;border:1px solid var(--line);padding:15px 18px;font-weight:900;letter-spacing:.02em;cursor:pointer;transition:.18s transform,.18s background}
+    .btn:hover{transform:translateY(-2px)}
+    .btn-primary{background:linear-gradient(135deg,var(--accent),var(--accent2));border-color:transparent;color:white;box-shadow:0 18px 40px rgba(139,92,246,.25)}
+    .btn-dark{background:rgba(255,255,255,.06)}
+    .proof{display:flex;flex-wrap:wrap;gap:10px;margin-top:22px;color:var(--muted);font-size:13px}
+    .chip{border:1px solid var(--line);padding:8px 10px;background:rgba(255,255,255,.04)}
+    .hero-card{position:relative;border:1px solid var(--line);background:linear-gradient(180deg,rgba(255,255,255,.08),rgba(255,255,255,.03));padding:12px;box-shadow:0 30px 90px rgba(0,0,0,.42)}
+    .hero-card img{display:block;width:100%;aspect-ratio:4/3;object-fit:cover;filter:saturate(1.12) contrast(1.05)}
+    .price-badge{position:absolute;right:24px;bottom:24px;background:rgba(6,7,10,.82);border:1px solid var(--line);padding:16px 18px;backdrop-filter:blur(12px)}
+    .price-badge small{display:block;color:var(--muted);font-size:12px;text-transform:uppercase;letter-spacing:.12em}
+    .price-badge strong{font-size:32px;letter-spacing:-.05em}
+    .strip{border-top:1px solid var(--line);border-bottom:1px solid var(--line);background:rgba(255,255,255,.035)}
+    .strip-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:0}
+    .stat{padding:22px;border-right:1px solid var(--line)}
+    .stat:last-child{border-right:0}
+    .stat strong{display:block;font-size:24px}.stat span{color:var(--muted);font-size:13px}
+
+    section{padding:70px 0}
+    h2{font-size:clamp(32px,4.2vw,52px);line-height:1;margin:0 0 16px;letter-spacing:-.055em}
+    .section-lead{color:var(--muted);font-size:18px;max-width:740px;margin:0 0 28px}
+    .cards{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+    .card{border:1px solid var(--line);background:rgba(255,255,255,.045);padding:22px;min-height:180px}
+    .card h3{margin:0 0 10px;font-size:20px}.card p{margin:0;color:var(--muted)}
+    .num{display:inline-grid;place-items:center;width:34px;height:34px;background:rgba(139,92,246,.18);border:1px solid rgba(139,92,246,.45);margin-bottom:18px;font-weight:900}
+    .split{display:grid;grid-template-columns:.9fr 1.1fr;gap:22px;align-items:start}
+    .offer{border:1px solid rgba(139,92,246,.5);background:linear-gradient(180deg,rgba(139,92,246,.18),rgba(34,211,238,.06));padding:26px;position:sticky;top:96px}
+    .offer .was{text-decoration:line-through;color:var(--muted)}
+    .offer .now{font-size:58px;letter-spacing:-.07em;font-weight:950;margin:4px 0 10px}
+    .offer ul{padding-left:18px;color:#D8DEE9}.offer li{margin:8px 0}
+    .form{border:1px solid var(--line);background:rgba(255,255,255,.045);padding:24px}
+    label{display:block;font-size:13px;color:var(--muted);text-transform:uppercase;letter-spacing:.1em;margin:14px 0 7px}
+    input,select,textarea{width:100%;background:#090C12;color:var(--text);border:1px solid var(--line);padding:14px;font:inherit;outline:none;border-radius:0}
+    input:focus,select:focus,textarea:focus{border-color:rgba(139,92,246,.85)}
+    textarea{min-height:92px;resize:vertical}
+    .full{width:100%;margin-top:18px}
+    .fineprint{font-size:12px;color:var(--muted);margin-top:12px}
+    .faq{display:grid;gap:12px;max-width:840px}
+    details{border:1px solid var(--line);background:rgba(255,255,255,.04);padding:18px}
+    summary{cursor:pointer;font-weight:900} details p{color:var(--muted);margin:12px 0 0}
+    footer{border-top:1px solid var(--line);padding:34px 0;color:var(--muted);font-size:13px}
+    .notice{border:1px solid rgba(244,63,94,.55);background:rgba(244,63,94,.08);padding:16px;color:#FFDCE4;margin-top:22px}
+    @media (max-width:900px){
+      .hero-grid,.split{grid-template-columns:1fr}.navlinks{display:none}.strip-grid{grid-template-columns:1fr 1fr}.stat:nth-child(2){border-right:0}.cards{grid-template-columns:1fr}.offer{position:static}.hero{padding-top:44px}
+    }
+    @media (max-width:520px){.strip-grid{grid-template-columns:1fr}.stat{border-right:0;border-bottom:1px solid var(--line)}.stat:last-child{border-bottom:0}.hero-actions .btn{width:100%}}
+  </style>
+</head>
+<body>
+  <header>
+    <div class="wrap nav">
+      <a href="#top" class="brand"><span class="mark">G</span><span>GlowRide</span></a>
+      <nav class="navlinks">
+        <a href="#why">Why it works</a>
+        <a href="#install">Install</a>
+        <a href="#order">Order</a>
+        <a href="#faq">FAQ</a>
+      </nav>
+      <a class="navcta" href="#order">Reserve Kit</a>
+    </div>
+  </header>
+
+  <main id="top">
+    <section class="hero">
+      <div class="wrap hero-grid">
+        <div>
+          <div class="eyebrow"><span class="pulse"></span> UAE launch batch now open</div>
+          <h1>Turn your cabin into a night-drive cockpit.</h1>
+          <p class="sub">A universal RGB ambient interior light kit that gives your car a premium glow without begging the dealership for mercy. App-controlled, clean, and built for people who refuse boring interiors.</p>
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="#order">Order via WhatsApp</a>
+            <a class="btn btn-dark" href="#install">See what’s included</a>
+          </div>
+          <div class="proof">
+            <span class="chip">Universal 12V fit</span>
+            <span class="chip">64+ colour modes</span>
+            <span class="chip">App / remote control</span>
+            <span class="chip">DIY friendly</span>
+          </div>
+          <div class="notice">Launch note: this is a preorder/drop-ship test batch. Delivery estimate is shown clearly before confirmation. Because lying to customers is how amateurs buy chargebacks.</div>
+        </div>
+        <div class="hero-card">
+          <img src="assets/hero.png" alt="Modern car interior with RGB ambient lighting" />
+          <div class="price-badge"><small>Launch price</small><strong>AED 149</strong></div>
+        </div>
+      </div>
+    </section>
+
+    <div class="strip">
+      <div class="wrap strip-grid">
+        <div class="stat"><strong>10 min</strong><span>to understand the upgrade</span></div>
+        <div class="stat"><strong>12V</strong><span>universal car system</span></div>
+        <div class="stat"><strong>64+</strong><span>colour combinations</span></div>
+        <div class="stat"><strong>AED 149</strong><span>first-batch launch price</span></div>
+      </div>
+    </div>
+
+    <section id="why">
+      <div class="wrap">
+        <h2>Factory interiors are dead inside. Fix that.</h2>
+        <p class="section-lead">This is not pretending to add horsepower. It does one thing: it makes the car feel better at night. That clarity is the whole sales angle.</p>
+        <div class="cards">
+          <div class="card"><span class="num">1</span><h3>Instant visual payoff</h3><p>Before/after impact is obvious. No essay. No TED Talk. People see the glow and understand it.</p></div>
+          <div class="card"><span class="num">2</span><h3>Low-risk upgrade</h3><p>No engine drama, no mechanical claims, no fake performance nonsense. Just cabin ambience and personalization.</p></div>
+          <div class="card"><span class="num">3</span><h3>Giftable and impulse-friendly</h3><p>Affordable enough for a quick buy, useful enough to avoid becoming another drawer corpse.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="install">
+      <div class="wrap">
+        <h2>What’s in the kit</h2>
+        <p class="section-lead">The exact supplier version may vary slightly during the sourcing test. Minimum spec stays the same.</p>
+        <div class="cards">
+          <div class="card"><h3>RGB light strips</h3><p>Flexible interior strips for dash, footwell and cabin accent zones.</p></div>
+          <div class="card"><h3>Controller</h3><p>Remote or app-based colour control, brightness adjustment and scene modes.</p></div>
+          <div class="card"><h3>Power setup</h3><p>12V car-compatible wiring. Installation depends on vehicle layout.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="order">
+      <div class="wrap split">
+        <aside class="offer">
+          <div class="eyebrow">First batch offer</div>
+          <div class="now">AED 149</div>
+          <p><span class="was">AED 199</span> launch pricing for the first validation batch.</p>
+          <ul>
+            <li>Universal RGB ambient light kit</li>
+            <li>WhatsApp confirmation before payment</li>
+            <li>UAE/GCC delivery estimate given upfront</li>
+            <li>Optional installation guidance</li>
+          </ul>
+          <p class="fineprint">No fake “limited stock” theatre. First batch is used to validate product demand and supplier quality.</p>
+        </aside>
+
+        <form class="form" id="orderForm">
+          <h2>Reserve your kit</h2>
+          <p class="section-lead">Fill this in and it opens WhatsApp with a clean order message. No Shopify. Humanity survives one more day.</p>
+          <label for="name">Name</label>
+          <input id="name" name="name" placeholder="Your name" required />
+
+          <label for="car">Car model</label>
+          <input id="car" name="car" placeholder="Example: BMW 330i / Nissan Patrol / Toyota Camry" required />
+
+          <label for="city">City</label>
+          <input id="city" name="city" placeholder="Abu Dhabi, Dubai, Sharjah..." required />
+
+          <label for="qty">Quantity</label>
+          <select id="qty" name="qty">
+            <option value="1 kit">1 kit - AED 149</option>
+            <option value="2 kits">2 kits - ask for bundle price</option>
+            <option value="3+ kits">3+ kits - bulk inquiry</option>
+          </select>
+
+          <label for="notes">Notes</label>
+          <textarea id="notes" name="notes" placeholder="Tell us if you want DIY use, installation help, or a specific colour preference."></textarea>
+
+          <button class="btn btn-primary full" type="submit">Open WhatsApp Order</button>
+          <a class="btn btn-dark full" id="emailOrder" href="#">Email Order Instead</a>
+          <p class="fineprint">By ordering, you understand this is an aftermarket universal kit. Delivery timing and final supplier version are confirmed before payment.</p>
+        </form>
+      </div>
+    </section>
+
+    <section id="faq">
+      <div class="wrap">
+        <h2>FAQ</h2>
+        <div class="faq">
+          <details open><summary>Will this fit my car?</summary><p>It is a universal 12V aftermarket kit designed for most cars. Fitment depends on cabin layout, trim gaps and power access.</p></details>
+          <details><summary>Can I install it myself?</summary><p>Yes, if you are comfortable with basic interior trim work. If you are the type to remove a panel with a kitchen knife, please involve someone competent before the car becomes modern art.</p></details>
+          <details><summary>How long does delivery take?</summary><p>For this validation batch, expected delivery is confirmed on WhatsApp before payment. Standard dropship delivery can take 7–15 business days depending on supplier dispatch and customs.</p></details>
+          <details><summary>Is this OEM?</summary><p>No. It is an aftermarket ambient lighting kit. OEM-style vehicle-specific kits may be offered later if the first batch proves demand.</p></details>
+          <details><summary>What happens if the kit arrives defective?</summary><p>We confirm supplier defect policy before accepting batch orders. Defective units are handled case by case with photo/video proof.</p></details>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="wrap">
+      <strong>GlowRide</strong><br />
+      UAE/GCC launch batch. WhatsApp: +971 50 235 1089. Email: motivatedc@gmail.com.<br />
+      This page is static. No Shopify. No monthly platform tax for existing on the internet.
+    </div>
+  </footer>
+
+  <script>
+    const WHATSAPP_NUMBER = "971502351089";
+    const ORDER_EMAIL = "motivatedc@gmail.com";
+    const PRODUCT = "GlowRide RGB Ambient Interior Light Kit";
+
+    function buildMessage(){
+      const name = document.getElementById('name').value.trim();
+      const car = document.getElementById('car').value.trim();
+      const city = document.getElementById('city').value.trim();
+      const qty = document.getElementById('qty').value;
+      const notes = document.getElementById('notes').value.trim();
+      return `Hi, I want to reserve the ${PRODUCT}.\n\nName: ${name}\nCar model: ${car}\nCity: ${city}\nQuantity: ${qty}\nNotes: ${notes || 'None'}\n\nPlease confirm delivery time, final price, and payment method.`;
+    }
+
+    document.getElementById('orderForm').addEventListener('submit', function(e){
+      e.preventDefault();
+      const msg = encodeURIComponent(buildMessage());
+      window.location.href = `https://wa.me/${WHATSAPP_NUMBER}?text=${msg}`;
+    });
+
+    document.getElementById('emailOrder').addEventListener('click', function(e){
+      e.preventDefault();
+      const subject = encodeURIComponent(`Order inquiry - ${PRODUCT}`);
+      const body = encodeURIComponent(buildMessage());
+      window.location.href = `mailto:${ORDER_EMAIL}?subject=${subject}&body=${body}`;
+    });
+  </script>
+</body>
+</html>
