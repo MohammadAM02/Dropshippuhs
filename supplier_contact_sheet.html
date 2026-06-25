@@ -1,0 +1,124 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>GlowRide Supplier Contact Sheet</title>
+  <style>
+    body{font-family:Arial,Helvetica,sans-serif;margin:0;background:#07080c;color:#f4f6fb;line-height:1.45}
+    .wrap{max-width:1000px;margin:0 auto;padding:28px 18px}
+    h1{font-size:42px;letter-spacing:-.05em;margin:0 0 10px}
+    p{color:#aeb7c5}.card{border:1px solid rgba(255,255,255,.14);background:#10131c;margin:14px 0;padding:18px}
+    h2{margin:0 0 6px;font-size:22px}.meta{color:#aeb7c5;font-size:14px;margin-bottom:12px}.btn{display:inline-block;padding:12px 14px;margin:6px 8px 6px 0;background:#7c3aed;color:white;text-decoration:none;font-weight:800}.btn.alt{background:#1f2937}.email{font-family:monospace;color:#dbeafe}.body{white-space:pre-wrap;background:#07080c;border:1px solid rgba(255,255,255,.1);padding:12px;color:#cbd5e1;font-size:14px;overflow:auto}.rank{display:inline-block;background:#22c55e;color:#031007;font-weight:900;padding:3px 7px;margin-right:8px}
+  </style>
+</head>
+<body>
+<div class="wrap">
+  <h1>Supplier Contact Sheet</h1>
+  <p>Click “Email Now” and your email client opens with subject + body prefilled. Because manually copying six emails in 2026 would be peak cave-dweller behaviour.</p>
+  <div id="cards"></div>
+</div>
+<script>
+const suppliers = [
+{rank:1,company:'YOBIS Lighting Co. Ltd.',email:'jocelyn@yobislight.com',phone:'+86 18206661431',subject:'RFQ - Dropship/OEM RGB Car Ambient Light Kits for UAE/GCC Test',body:`Hi Jocelyn,
+
+We are launching a UAE/GCC direct-to-consumer test for RGB car ambient interior light kits. Please quote your best-selling universal 18-in-1 / 10-in-1 ambient light kit.
+
+Please send:
+1. Unit price for 1 sample, 10 units, 50 units, 100 units
+2. MOQ for blind dropshipping and OEM packaging
+3. Shipping options and delivery time to UAE, US, UK
+4. Product photos/videos we can use in ads
+5. Certifications: CE/FCC/RoHS if available
+6. Warranty/defect policy
+7. Handling time per order and tracking method
+
+We need a fast reply because this is a 14-day validation test.
+
+Regards,
+Happy`},
+{rank:2,company:'Foshan Kobo Lighting Co. Ltd.',email:'admin@kobo-autolamp.com',phone:'WhatsApp +86 13923111912 / Tel +86 18902416782',subject:'RFQ - Universal RGB Ambient Light Kits / Dropshipping to UAE',body:`Hi Terrence,
+
+We are preparing a UAE/GCC ecommerce test for car RGB ambient lighting kits. Please quote your universal RGB and colorful ambient light kits suitable for most cars.
+
+Please send:
+1. Best-selling SKU photos and videos
+2. Sample price and bulk tiers at 10/50/100 units
+3. Blind dropshipping availability
+4. Shipping price/time to UAE, US, UK
+5. Certifications and warranty terms
+6. Packaging options and logo/OEM MOQ
+
+We are choosing supplier this week. Please reply with your fastest dispatch option.
+
+Regards,
+Happy`},
+{rank:3,company:'Yiwu Jony Auto Parts Co. Ltd.',email:'sunny@jonyautoparts.com',phone:'WhatsApp +86 18314980118 / +86 13515893543',subject:'RFQ - Interior Ambient Lighting Kit 6/10/14-in-1 for UAE Test',body:`Hi Sunny,
+
+We are testing a car ambient light ecommerce offer in UAE/GCC and need a reliable supplier for universal 6-in-1, 10-in-1, and 14-in-1 interior ambient lighting kits.
+
+Please quote:
+1. Sample price and bulk price for 10/50/100 units
+2. Best SKU for low refund rate
+3. Shipping options to UAE, US, UK
+4. Blind dropshipping possibility
+5. Photos/videos permission for ads
+6. Warranty/defect replacement policy
+7. Handling time and tracking
+
+We need to choose quickly. Send your best seller and fastest option.
+
+Regards,
+Happy`},
+{rank:4,company:'INCARPASSION / Guangzhou Tianlang Car Accessories Co. Ltd.',email:'sales@incarpassion.com',phone:'+86 13602826250',subject:'Dealer Inquiry - Ambient Lighting Kits for UAE/GCC Ecommerce',body:`Hi,
+
+We are launching a UAE/GCC ecommerce test for car ambient lighting and are interested in your universal and vehicle-specific kits.
+
+Please send:
+1. Your best-selling universal kit and top BMW/Mercedes/Audi kits
+2. Unit price for 1 sample, 10, 50, 100 units
+3. Dropshipping/wholesale options
+4. Shipping time and courier pricing to UAE
+5. Product media we can use for ads
+6. Warranty and defect policy
+7. OEM packaging MOQ
+
+We are selecting supplier within 48 hours.
+
+Regards,
+Happy`},
+{rank:5,company:'Shenzhen VQ Automotive Electronics Co. Ltd.',email:'vincent@vqcar.cn',phone:'WhatsApp/WeChat +86 13410589746',subject:'RFQ - ODM Car Atmosphere Light Kit for Dropshipping Test',body:`Hi Vincent,
+
+We are running a 14-day ecommerce validation test for RGB car atmosphere/ambient light kits in UAE/GCC. Please quote your best universal kit for direct-to-consumer sales.
+
+Please send:
+1. Product catalog for universal ambient light kits
+2. Sample, 10, 50 and 100 unit pricing
+3. Dropshipping support and blind package options
+4. Shipping time and cost to UAE, US, UK
+5. Photos/videos/ad media permission
+6. Warranty/defect policy
+7. OEM packaging MOQ
+
+Fast response is appreciated.
+
+Regards,
+Happy`},
+{rank:6,company:'NacVision',email:'info@nacvision.com',phone:'',subject:'RFQ - Universal Ambient Light Kit Ready Shipment',body:`Hi,
+
+We saw your universal ambient light kit and are sourcing for a UAE/GCC ecommerce test. Please send price, MOQ, available stock, shipping time to UAE/US/UK, ad media availability, warranty terms, and whether you support blind dropshipping.
+
+Regards,
+Happy`}
+];
+const cards = document.getElementById('cards');
+suppliers.forEach(s=>{
+ const mailto = `mailto:${s.email}?subject=${encodeURIComponent(s.subject)}&body=${encodeURIComponent(s.body)}`;
+ const div = document.createElement('div');
+ div.className = 'card';
+ div.innerHTML = `<h2><span class="rank">${s.rank}</span>${s.company}</h2><div class="meta"><span class="email">${s.email}</span> ${s.phone ? ' | '+s.phone : ''}</div><a class="btn" href="${mailto}">Email Now</a><a class="btn alt" href="mailto:${s.email}">Blank Email</a><div class="body">Subject: ${s.subject}\n\n${s.body}</div>`;
+ cards.appendChild(div);
+});
+</script>
+</body>
+</html>
